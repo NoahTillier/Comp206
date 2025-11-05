@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<meta charset = "UTF-8">
+<html lang = "en">
+    <head>
+        <title>Comp206_11</title>
+    </head>
+    <body>
+        <H1>Odin Project CSS notes</H1>
+        <ol type = "I">
+            <li>Selectors</li>
+            <ol type = "A">
+                <li>Universal Selector</li>
+                <ol>
+                    <li>The universal selector will select elements of every type. <code>*{ color: purple; }</code></li>
+                </ol>
+                <li>Type selectors</li>
+                <ol>
+                    <li>A type selector will select all elements of the given element type. <code>div { color: white; }</code> sets all <div> elements to white</div></li>
+                </ol>
+                <li>Class selector</li>
+                <ol>
+                    <li>You can create a class element with: <code>&ltdiv class ="class"&gt</code></li>
+                    <li>You can stype it with <code>.class { color: red; }</code></li>
+                    <li>You can add multiple classes with a single space separated list. One class could change the text font, one could change the color, etc.</li>
+                    <li>The name of the class cannot start with a number</li>
+                </ol>
+                <li>ID selectors</li>
+                <ol>
+                    <li>An element can only have one ID</li>
+                    <li>The element is selected based on its ID</li>
+                    <li><code>&ltdiv id="title"&gtWORDS&lt/div&gt</code></li>
+                    <li><code>#title { background-color: red; }</code></li>
+                    <li>The name of the ID can not start with a number</li>
+                </ol>
+                <li>Grouping Selector</li>
+                <ol>
+                    <li>We can group similar declarations together with a comma</li>
+                    <li><code>.read, /n .unread { /n color: white; /n background-color: black; /n} /n.read{...} /n.unread{...}</code></li>
+                </ol>
+                <li>Chaining selectors</li>
+                <ol>
+                    <li>If we have a class "subsection header" and a class "subsection preview", we can apply a unique style to exclusively subsection header (not subsection or header) with <code>.subsection.header {...}</code></li>
+                    <li>You can replace the second dot with a "#" if the item is an ID instead of a class (allows for chaining IDs and classes).</li>
+                </ol>
+            </ol>
+            <li>Properties</li>
+            <ol type = "A">
+                <li><code>color</code> sets text color</li>
+                <li><code>background-color</code> sets background color</li>
+                <ol>
+                    <li>Colors can be hexadecimal (#1100ff;), rgb (rgb(100,0,127);), or HSL (hsl(15, 82%, 56%)</li>
+                    <li>Colors can also be color names (ex. white) or transparent.</li>
+                </ol>
+                <li>Font</li>
+                <ol>
+                    <li>font-family is a single value or comma-separated list of values.</li>
+                    <ol type = "a">
+                        <li>the font-family should have a list because it allows the browser to pick in descending order the first font that it supports.</li>
+                        <li>Examples are <code>"Times New Roman"</code> and <code>serif</code></li>
+                    </ol>
+                    <li>font-size. Ex, font-size: 22px</li>
+                    <li>font-weight is the boldness of the text from 1 to 1000 (keyword <code>bold</code> is 700).</li>
+                    <li>text-align aligns the text within an element. Values could be center, left, right...</li>
+                </ol>
+                <li>Images</li>
+                <ol>
+                    <li>images have height: and width: properties</li>
+                    <li>You can set either manually or adjust the size automatically with "auto"</li>
+                    <ol type = "a">
+                        <li>specifying a height and width prevents the page from jumping when the image loads in because space is reserved for it.</li>
+                    </ol>
+                </ol>
+            </ol>
+            <li>How to add CSS to HTML</li>
+            <ol type = "A">
+                <li>External CSS</li>
+                <ol>
+                    <li>Create an external CSS file and link it to the HTML head using the &ltlink rel ="stylesheet" href="styles.css"&rt element. (Note that href is the actual link relative to the file location)</li>
+                    <li>The filename must be .css</li>
+                </ol>
+                <li>Internal CSS</li>
+                <ol>
+                    <li>Write the CSS inside the file itself</li>
+                    <li>Inside the body of the &lthead&rt tag, place a &ltstyle&gt tag. The inside defines css.</li>
+                </ol>
+                <li>Inline CSS</li>
+                <ol>
+                    <li>The CSS style is specified on the same line</li>
+                    <li>Avoid using except when writing a style for a single line</li>
+                    <li>Inline CSS overrides all other methods</li>
+                    <li><code>&ltdiv style="color:white...&gt&lt/div&gt</code></li>
+                </ol>
+            </ol>
+        </ol>
+    </body>
+</html>
