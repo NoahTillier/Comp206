@@ -5,7 +5,7 @@
         <title>Comp206_11</title>
     </head>
     <body>
-        <H1>Odin Project CSS notes</H1>
+        <h1>Odin Project CSS notes 1</h1>
         <ol type = "I">
             <li>Selectors</li>
             <ol type = "A">
@@ -90,6 +90,36 @@
                     <li>Inline CSS overrides all other methods</li>
                     <li><code>&ltdiv style="color:white...&gt&lt/div&gt</code></li>
                 </ol>
+            </ol>
+        </ol>
+        <h1>Odin Project: The Cascade</h1>
+        <ol type = "I">
+            <li>The cascade</li>
+            <ol type = "A">
+                <li>Unexpected things happening in our HTML file are sometimes determined by the cascade.</li>
+                <li>Specificity</li>
+                <ol>
+                    <li>Inline styles have the highest specificity</li>
+                    <li>ID selects are the most specific selector</li>
+                    <li>Class selectors are the next most specific selector</li>
+                        <ol type = "a">
+                            <li>The more class selectors you have, the more specific a selector is. For example, .main .list is more selective than .subsection</li>
+                        </ol>
+                    <li>Type selectors are the least specific selector</li>
+                    <li>Specificity is used to determine tie-breakers</li>
+                </ol>
+            </ol>
+            <li>Inheretance</li>
+            <ol type = "A">
+                <li>A family's descendants can inherit properties such as color, font-size, font-family, etc.</li>
+                <ol>
+                    <li>To check whether a property is inherited or not, you can see the MDN documentation</li>
+                </ol>
+                <li>Inheritance looses to higher specificity.</li>
+            </ol>
+            <li>Final tie braeker</li>
+            <ol type = "A">
+                <li>At the end of the day, the last defined element wins the specificity wars.</li>
             </ol>
         </ol>
     </body>
