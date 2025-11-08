@@ -33,6 +33,309 @@
                 </ol>
             </ol>
         </ol>
+        <h1>Slides 10 Review</h1>
+        <ol type = "I">
+            <li>A C program has the following elements:
+                <div class = "codeContainer">
+                    <pre><code class = "code">
+#include &ltstdio.h&gt  //stdio is the standard input/output library
+//including a library is a "directive".
+/*Comments*/
+//More Comments
+//Non-main functions go above the main function
+int main(int argc){
+    //the main method is mandetory
+    char c; //note the semi-colon punctuation
+    //gets input from STDIN. Only reads a character (as an int value; ASCII code)
+    c = get(stdin);
+    int i = 1;
+    if( i == c || c == i){
+        //condition operators in C resemble those in Java and C#
+    }
+    else{
+        //do something else
+    }
+
+    //gets input from the user
+    int end;
+    //outputs
+    printf("Enter a number: ");
+    //get the number
+    scanf("%d", &end);
+
+    for(j=0; k &lt end; j++){
+        //prints out the values 0 to end-1
+        puts(j);
+        //prints out "Hello" end times, followed by a line break
+        puts("Hello \n");
+        /*escape characters are
+        \n (newline), \r (carriage return), \t (tab), \\ (backslash), \b (backspace)*/
+    }
+    //print with a variable input. %d is a placeholder for the variable end.
+    printf("This function is now ending with an end value of %d", end);
+    
+    //argc[1] is the first variable input, like bash $#. Only works when the input is an array
+    return argc; //every function needs a return statement
+}
+</code></pre>
+                </div>
+            </li>
+            <li>Run a C program by using gcc to convert into machine-code, and then run /a.out
+                <ol type = "A">
+                    <li>gcc -o allows you to name the file. For example gcc -o hello helloworld.c creates a executable file called hello.</li>
+                </ol>
+            </li>
+        </ol>
+
+        <h1>Slides 11 Notes</h1>
+        <ol type = "I">
+            <li>The data types available in C are
+                <ol type = "A">
+                    <li>char (8 bit integer which is converted to ASCII)
+                        <ol>
+                            <li>You can add signed in front, allowing it to be either signed or unsigned</li>
+                        </ol>
+                    </li>
+                    <li>int (whole number of at least 16 bits with size determined by machine)
+                        <ol>
+                            <li>You can add "unsigned" in front, forcing the int to be strictly positive ("signed" by default)</li>
+                            <li>"short" causes an int to take up less space</li>
+                            <li>"long" leads int to be larger (generally 64 bits)</li>
+                            <li>"long" can be added in front of a "long int" to make it even larger. At minimum it is 64 bits.</li>
+                            <li>Integers are generally used for boolean testing</li>
+                        </ol>
+                    </li>
+                    <li>float (number with a fractional part, usually 32 bits. Has 6 digits of precision)</li>
+                    <li>double (a float which is twice the size, with 15 digits of precision)</li>
+                </ol>
+            </li>
+            <li>Void is used in function arguments to indicate that there is no variable parameters</li>
+            <li>Getting other data types in C
+                <ol type = "A">
+                    <li>You can use Arrays, Structures, and Pointers to create other data types.</li>
+                    <li>Strings are character arrays</li>
+                </ol>
+            </li>
+            <li>Declaring a variable has four different syntaxes
+                <ol type = "A">
+                    <li>TYPE VAR_NAME;
+                        <ol>
+                            <li>int x;</li>
+                        </ol>
+                    </li>
+                    <li>TYPE VAR_NAME = VALUE;
+                        <ol>
+                            <li>int x = 0;</li>
+                            <li>short int true = 1;</li>
+                        </ol>
+                    </li>
+                    <li>TYPE VAR1,VAR2,...VARn;
+                        <ol>
+                            <li>int x,y,z; </li>
+                        </ol>
+                    </li>
+                    <li>TYPE VAR1=VALUE,VAR2,...VARn
+                        <ol>
+                            <li>unsigned short int x=5, y, z=2;</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>Keywords and Declarations
+                <ol type = "A">
+                    <li>the const key word prevents the variable from being changed</li>
+                    <li>typedef allows the creation of custom type names.</li>
+                    <div class = "codeContainer">
+                        <pre><code class = "code">
+typedef int scalefactor;
+    
+int main(){
+    scalefactor a;
+    a = 10;
+    printf("The scale factor is: %d", a);
+}
+    </code></pre>
+                    </div>
+                </ol>
+            </li>
+            <li>Operators (more can be included with the directive #include&ltmath.h&gt)
+                <table>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Function</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>add</td>
+                        <td>x=5+5;</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>subtract</td>
+                        <td>x=5-2;</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>multiply</td>
+                        <td>x = 5 * 2;</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>Divide</td>
+                        <td>x = 5 / 2 //note that x becomes 2</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>modulo</td>
+                        <td>x = 5 % 2 //x becomes 1</td>
+                    </tr>
+                    <tr>
+                        <td>++</td>
+                        <td>Increment</td>
+                        <td>x++;</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>Decrement</td>
+                        <td>x--;</td>
+                    </tr>
+                    <tr>
+                        <td>+=</td>
+                        <td>Increment by</td>
+                        <td>x+=10;</td>
+                    </tr>
+                    <tr>
+                        <td>-=</td>
+                        <td>Decrement by</td>
+                        <td>x-=10;</td>
+                    </tr>
+                    <tr>
+                        <td>*=</td>
+                        <td>Multiply by</td>
+                        <td>x*=10;</td>
+                    </tr>
+                    <tr>
+                        <td>/=</td>
+                        <td>Divide by</td>
+                        <td>x/=10;</td>
+                    </tr>
+                </table>
+            </li>
+            <li>Note: Standard Java operators for logical operations</li>
+            <li>Variables can be assigned boolean values
+                <ol type = "A">
+                    <li>Ex. x = 5 > 10 //is false so x=1</li>
+                </ol>
+            </li>
+            <li>Incrementors and decrementors operate before the function executes if they are before (ex. ++y) or after the function executes if they are after the variable (ex. y++)</li>
+            <li>Control structures
+                <ol type = "A">
+                    <li>if statements
+                        <ol>
+                            <li>Single statement: if(x &lt 10) puts ("X is less than 10\n")</li>
+                            <li>Single statement:
+                                <div class = "codeContainer">
+<pre><code class = "code">
+    if (x &lt 10) puts("true");
+    else puts("false");
+</code></pre>
+                                </div>
+                            </li>
+                            <li>Multi-statement: 
+                                <div class = "codeContainer">
+<pre><code class = "code">
+    if (x &lt 10){
+        puts("X is less than 10\n");
+        c = getc(stdin);
+    }
+</code></pre>
+                                </div>
+                            </li>
+                            <li>Multi-statement, if-else:
+                                <div class = "codeContainer">
+<pre><code class = "code">
+    if(x &lt 10){
+        puts(true)
+        c = getc(stdin);
+    } else {
+        puts(false);
+    }
+</code></pre>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>Switch statement
+                        <ol>
+                            <li>Used to check multiple cases
+                                <div class = "codeContainer">
+<pre><code class = "code">
+    switch(var){
+        case 'y': puts("...");
+            break;
+        case 'a':
+        case 'B': puts("...");
+            break;
+        default:
+            puts("...");
+    }
+</code></pre>                                    
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>While loops
+                        <ol>
+                            <li>Single statement: while(CONDITION) single statement;</li>
+                            <li>Multi-statement: while(CONDITION){statements};</li>
+                            <li>Do-while-loop
+                                <div class = "codeContainer">
+<pre><code class = "code">
+    char specie;
+    do {
+        puts("Specie (Elf or Hobbit): ");
+        specie = getc(stdin);
+    } while (specie!='E' && specie!='e');
+</code></pre>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>For loops
+                        <ol>
+                            <li>Single statement: for(START;CONDITION;EXPRESSION) SINGLE_STATEMENT;</li>
+                            <li>Omitting start and expression
+                                <div class = "codeContainer">
+<pre><code class = "code">
+    x = 11;
+    for(;x &gt 10;)x--;
+</code></pre>
+                                </div>
+                            </li>
+                            <li>Multi-statement for loops
+                                <div class = "codeContainer">
+<pre><code class = "code">
+    int x, y;
+    char c;
+    for(x=0, y=10, c=' '; x &lt 10 && c != 'x'; x+=2, y--){
+        puts("Hi");
+        c = getc(stdin);
+    }
+</code></pre>
+                                </div>
+                                <ol type = "a">
+                                    <li>Note that you can declare a variable outside of a loop as long as you don't declare the value</li>
+                                    <li>You can use a trail of commas in the START and EXPRESSION areas to separate items.</li>
+                                    <li>A for loop must always have semi-colons to be valid.</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+
         <p><a href = "ninth_class_lecture.html" target = "_self" rel = "noopener noreferrer">Back</a></p>
         <p><a href = "./../index.html" target = "_self" rel = "noopener noreferrer">Home</a></p>
         <p><a href = "eleventh_class_lecture.html" target="_self" rel = "noopener noreferrer">Next</a></p>   
