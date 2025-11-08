@@ -37,46 +37,49 @@
         <ol type = "I">
             <li>A C program has the following elements:
                 <div class = "codeContainer">
-                    <pre><code class = "code">
-#include &ltstdio.h&gt  //stdio is the standard input/output library
-//including a library is a "directive".
-/*Comments*/
-//More Comments
-//Non-main functions go above the main function
-int main(int argc){
-    //the main method is mandetory
-    char c; //note the semi-colon punctuation
-    //gets input from STDIN. Only reads a character (as an int value; ASCII code)
-    c = get(stdin);
-    int i = 1;
-    if( i == c || c == i){
-        //condition operators in C resemble those in Java and C#
-    }
-    else{
-        //do something else
-    }
-
-    //gets input from the user
-    int end;
-    //outputs
-    printf("Enter a number: ");
-    //get the number
-    scanf("%d", &end);
-
-    for(j=0; k &lt end; j++){
-        //prints out the values 0 to end-1
-        puts(j);
-        //prints out "Hello" end times, followed by a line break
-        puts("Hello \n");
-        /*escape characters are
-        \n (newline), \r (carriage return), \t (tab), \\ (backslash), \b (backspace)*/
-    }
-    //print with a variable input. %d is a placeholder for the variable end.
-    printf("This function is now ending with an end value of %d", end);
+<pre><code class = "code">    #include &ltstdio.h&gt  //stdio is the standard input/output library
+    //including a library is a "directive".
     
-    //argc[1] is the first variable input, like bash $#. Only works when the input is an array
-    return argc; //every function needs a return statement
-}
+    /*Comments*/
+    //More Comments
+    
+    //Non-main functions go above the main function
+    int main(int argc){
+        //the main method is mandetory
+        
+        char c; //note the semi-colon punctuation
+        //gets input from STDIN. Only reads a character (as an int value; ASCII code)
+        c = get(stdin);
+        int i = 1;
+        
+        if( i == c || c == i){
+            //condition operators in C resemble those in Java and C#
+        }
+        else{
+            //do something else
+        }
+
+        //gets input from the user
+        int end;
+        //outputs
+        printf("Enter a number: ");
+        //get the number
+        scanf("%d", &end);
+
+        for(j=0; k &lt end; j++){
+            //prints out the values 0 to end-1
+            puts(j);
+            //prints out "Hello" end times, followed by a line break
+            puts("Hello \n");
+            /*escape characters are
+            \n (newline), \r (carriage return), \t (tab), \\ (backslash), \b (backspace)*/
+        }
+        //print with a variable input. %d is a placeholder for the variable end.
+        printf("This function is now ending with an end value of %d", end);
+        
+        //argc[1] is the first variable input, like bash $#. Only works when the input is an array
+        return argc; //every function needs a return statement
+    }
 </code></pre>
                 </div>
             </li>
@@ -146,15 +149,14 @@ int main(int argc){
                     <li>the const key word prevents the variable from being changed</li>
                     <li>typedef allows the creation of custom type names.</li>
                     <div class = "codeContainer">
-                        <pre><code class = "code">
-typedef int scalefactor;
+<pre><code class = "code">    typedef int scalefactor;
     
-int main(){
-    scalefactor a;
-    a = 10;
-    printf("The scale factor is: %d", a);
-}
-    </code></pre>
+    int main(){
+        scalefactor a;
+        a = 10;
+        printf("The scale factor is: %d", a);
+    }
+</code></pre>
                     </div>
                 </ol>
             </li>
@@ -236,16 +238,14 @@ int main(){
                             <li>Single statement: if(x &lt 10) puts ("X is less than 10\n")</li>
                             <li>Single statement:
                                 <div class = "codeContainer">
-<pre><code class = "code">
-    if (x &lt 10) puts("true");
+<pre><code class = "code">    if (x &lt 10) puts("true");
     else puts("false");
 </code></pre>
                                 </div>
                             </li>
                             <li>Multi-statement: 
                                 <div class = "codeContainer">
-<pre><code class = "code">
-    if (x &lt 10){
+<pre><code class = "code">    if (x &lt 10){
         puts("X is less than 10\n");
         c = getc(stdin);
     }
@@ -254,8 +254,7 @@ int main(){
                             </li>
                             <li>Multi-statement, if-else:
                                 <div class = "codeContainer">
-<pre><code class = "code">
-    if(x &lt 10){
+<pre><code class = "code">    if(x &lt 10){
         puts(true)
         c = getc(stdin);
     } else {
@@ -270,8 +269,7 @@ int main(){
                         <ol>
                             <li>Used to check multiple cases
                                 <div class = "codeContainer">
-<pre><code class = "code">
-    switch(var){
+<pre><code class = "code">    switch(var){
         case 'y': puts("...");
             break;
         case 'a':
@@ -291,8 +289,7 @@ int main(){
                             <li>Multi-statement: while(CONDITION){statements};</li>
                             <li>Do-while-loop
                                 <div class = "codeContainer">
-<pre><code class = "code">
-    char specie;
+<pre><code class = "code">    char specie;
     do {
         puts("Specie (Elf or Hobbit): ");
         specie = getc(stdin);
@@ -307,16 +304,14 @@ int main(){
                             <li>Single statement: for(START;CONDITION;EXPRESSION) SINGLE_STATEMENT;</li>
                             <li>Omitting start and expression
                                 <div class = "codeContainer">
-<pre><code class = "code">
-    x = 11;
+<pre><code class = "code">    x = 11;
     for(;x &gt 10;)x--;
 </code></pre>
                                 </div>
                             </li>
                             <li>Multi-statement for loops
                                 <div class = "codeContainer">
-<pre><code class = "code">
-    int x, y;
+<pre><code class = "code">    int x, y;
     char c;
     for(x=0, y=10, c=' '; x &lt 10 && c != 'x'; x+=2, y--){
         puts("Hi");
