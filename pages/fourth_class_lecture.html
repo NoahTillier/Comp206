@@ -13,7 +13,7 @@
                 <ol>
                     <li>tar command is used to archive more than one file into one file</li>
                     <li><code>tar -cvf log.tar *.log</code></li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li>* is a wildcard which means that it can be everything</li>
                         <li>the command above picks everything in the directory with a .log suffix and moves it to log.tar</li>
                         <li>you can use the <code>-c</code> option to find a different option</li>
@@ -26,10 +26,10 @@
                 <li>Permissions for the owner, group, and others</li>
                 <ol>
                     <li>There are three times of permissions: read, write, and execute.</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li><code>ls -l</code> prints the permissions of every file and directory.</li>
                         <li>a "d" on the far left indicates a directory</li>
-                        <ol type = "i">
+                        <ol type = "i" class = "lowerRoman">
                             <li>ex. d,rwx,rwx,rwx</li>
                         </ol>
                         <li>a "-" at the start of a file indicates that it is a file, not a directory</li>
@@ -38,10 +38,10 @@
                     </ol>
                     <li>On a system an owner can have fewer rights than the other users, but that is unconventional.</li>
                     <li>using <code>ls -l</code> you can also see the owner and the group</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li>Ex. -rwxr--r-- 1 <i>noah</i> <b>noah</b></li>
                         <li>The itallics indicate the owner, the bold indicates the group</li>
-                        <ol type = "i">
+                        <ol type = "i" class = "lowerRoman">
                             <li>You can be a member of multiple groups and can be assigned using a command</li>
                         </ol>
                     </ol>
@@ -54,7 +54,7 @@
                     <li>the owner is the only one who can change the users for everyone</li>
                     <li>The owner of a file can be changed but you must be the owner; a group can also be changed but you must be a member of the group and a member of the group you change it to.</li>
                     <li>Use the following symbols</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li>u represents the user who owns the file</li>
                         <li>g represents the group</li>
                         <li>o represents all other users</li>
@@ -70,7 +70,7 @@
                     <li>Ex. <code>chmod a=rw,u+x foo</code> sets all permissions to read and write, then adds execute permissions for the owner for the "foo" file</li>
                     <li>if no group, user, or other is specified, all "a" permissions will be updated accordingly.</li>
                     <li>Octal representation can be used to represent the permissions. Convert octal to binary representation, the leftmost corresponds to read, the middle corresponds to write, and the rightmost corresponds to execute.</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li>ex. <code>chmod 700 foo</code> gives you all permissions (7 = 111) and removes all permissions from groups and others (0=000)</li>
                     </ol>
                     <li>Execute in a directory means you can traverse.</li>
@@ -85,26 +85,26 @@
                 <li>Vim is difficult to learn but very powerful.</li>
                 <ol>
                     <li>vim does not have a GUI; everything happens through the command line.</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li>As you memorize things, it gets easier to use vim than other options, allowing you to quickly and efficiently edit files.</li>
                     </ol>
                     <li>Vim has three modes</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li>Normal Mode</li>
-                        <ol type = "i">
+                        <ol type = "i" class = "lowerRoman">
                             <li>Used to navigate and copy and paste</li>
                             <li>use special one letter commands</li>
                             <li>use arrow keys</li>
                         </ol>
                         <li>Insert Mode</li>
-                        <ol type = "i">
+                        <ol type = "i" class = "lowerRoman">
                             <li>edit text</li>
                             <li>can use any keyboard keys</li>
                             <li>press "i" key to enter</li>
                             <li>press "esc" key to leave</li>
                         </ol>
                         <li>Command Mode</li>
-                        <ol type = "i">
+                        <ol type = "i" class = "lowerRoman">
                             <li>issues commands like Save, Quit, Search, etc.</li>
                         </ol>
                     </ol>

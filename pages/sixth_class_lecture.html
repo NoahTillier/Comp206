@@ -14,11 +14,11 @@
                     <li><code>ls -al > directorylist.txt</code> will create a document called directorylist.txt which will contain the output stream from ls</li>
                     <li><code>ls -al >> directorylist.txt</code> will append the output at the end of the document.</li>
                     <li>Default is 1 (stdout), Adding 2 before the > will allow you to route (stderr) instead.</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li>Ex. <code>ls -al 2>> directorylist.txt</code></li>
                     </ol>
                     <li>By using &lt, you can the contents of a file into stdin.</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li>Ex. <code>command &lt input.txt</code></li>
                     </ol>
                 </ol>
@@ -31,7 +31,7 @@
                         <li>head presents only the first 10 files (unless otherwise specified)</li>
                         <li>tail presents only the last 10 files (unless otherwise specified)</li>
                         <li>the number of items can be specified with <code>-n #</code></li>
-                        <ol type = "i">
+                        <ol type = "i" class = "lowerRoman">
                             <li>Ex. <code>tail -n 3 directorylist.txt</code> will print out the last three lines of the file directorylist.txt</li>
                         </ol>
                     </ol>
@@ -56,7 +56,7 @@
                     <li><code>cut -c [(k)-(n)]</code> extracts all characters between columns k and n.</li>
                     <li><code>-f</code> extracts fields separated by a delimiter (default is tab)</li>
                     <li><code>-d</code> sets the delimiter, like ",", " ", ".", etc.</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li>Ex. <code>cut -d " " -f 1 sixth_class_lecture.html</code> will print out the first item in each line bounded by spaces or tabs.</li>
                     </ol>
                     <li><code>--complement</code></li>

@@ -1,0 +1,40 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #f0f0f0;
+    font-family: "Times New Roman", serif;
+    font-size: 12px;
+}
+
+
+* {
+	font-size: 12px;
+	font-family: "Times New Roman"
+}
+
+ol[type = "i"]{
+	color: #EE7EA0;
+}
+
+ol[type = "a"]{
+	color: #FFAF6E;
+}
+
+ol[type = "1"]{
+	color:#FFE2A6;
+}
+
+ol{
+	color:#FFE2A6;
+}
+
+ol.lowerLetter {
+	color:#7D8BE0;
+}
+
+ol.lowerRoman {
+	color:#CDBDEB
+}

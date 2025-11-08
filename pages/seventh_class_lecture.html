@@ -23,7 +23,7 @@
                     <li>A script is a collection of commands. Commands are sometimes built in to the shell. However, there are also external commands.</li>
                     <li>A script must be CHMOD'd to be executable to be run on a machine.</li>
                     <li>You have to define which program is executing it.</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li>Bash is the default interpreter</li>
                         <li>To change the interpreter, use <code>#! + name of script</code>. This is known as "sha-bang" (Hash-Bang). </li>
                         <li>The Bash shell script first line must be #!/bin/bash</li>
@@ -36,7 +36,7 @@
                     <li>Note that there can be no space around the assignment operator <code>=</code></li>
                     <li>You must use the $ sign notation ahead of your variable name to call on a variable. Ex. Y=$Bob where Bob is one variable with the value of 5.</li>
                     <li><code>$</code> can be used to assign a positional variable</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li>Ex. <code>./script</code> might contain <code>x=$1, y=$2, z=$3</code>. Calling <code>./script 5 2 Bob</code> sets x=5,y=2,z=Bob inside the script.</li>
                         <li>There are a number of parameters. $0 returns the name of the shell. $# shows the number of arguments on the command line. $? is the exit value of the last command executed. $$ the process number of the current process. $! process number of the last command done in the background.</li>
                     </ol>
@@ -44,7 +44,7 @@
                 <li>Bash Commands</li>
                 <ol>
                     <li>Reading from STDIN is accomplished with the read command. The input string is stored in a specified variable. Ex. <code>read name</code> stores input line in the variable name</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter">
                         <li><code>-p</code> can be used to have a prompt message outputted. Ex. <code>read -p "what's your name?" name</code></li>
                     </ol>
                     <li><code>$(())</code> evaluates the items inside the brackets in arithmetic</li>

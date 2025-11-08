@@ -3,8 +3,9 @@
 <html lang = "en">
     <head>
         <title>Comp206_11</title>
+        <link rel = "stylesheet" href = "./../code/styles.css">
     </head>
-    <body>
+    <body style="background-color: #4F3F3E;">
         <h1>Odin Project CSS notes 1</h1>
         <ol type = "I">
             <li>Selectors</li>
@@ -48,13 +49,13 @@
                 <li><code>color</code> sets text color</li>
                 <li><code>background-color</code> sets background color</li>
                 <ol>
-                    <li>Colors can be hexadecimal (#1100ff;), rgb (rgb(100,0,127);), or HSL (hsl(15, 82%, 56%)</li>
+                    <li>Colors can be hexadecimal (#1100ff;), rgb (rgb(100,0,127);), or HSL (hsl(15, 82%, 56%))</li>
                     <li>Colors can also be color names (ex. white) or transparent.</li>
                 </ol>
                 <li>Font</li>
                 <ol>
                     <li>font-family is a single value or comma-separated list of values.</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter" class = "lowerLetter">
                         <li>the font-family should have a list because it allows the browser to pick in descending order the first font that it supports.</li>
                         <li>Examples are <code>"Times New Roman"</code> and <code>serif</code></li>
                     </ol>
@@ -66,7 +67,7 @@
                 <ol>
                     <li>images have height: and width: properties</li>
                     <li>You can set either manually or adjust the size automatically with "auto"</li>
-                    <ol type = "a">
+                    <ol type = "a" class = "lowerLetter" class = "lowerLetter">
                         <li>specifying a height and width prevents the page from jumping when the image loads in because space is reserved for it.</li>
                     </ol>
                 </ol>
@@ -102,7 +103,7 @@
                     <li>Inline styles have the highest specificity</li>
                     <li>ID selects are the most specific selector</li>
                     <li>Class selectors are the next most specific selector</li>
-                        <ol type = "a">
+                        <ol type = "a" class = "lowerLetter" class = "lowerLetter">
                             <li>The more class selectors you have, the more specific a selector is. For example, .main .list is more selective than .subsection</li>
                         </ol>
                     <li>Type selectors are the least specific selector</li>
@@ -122,7 +123,7 @@
                 <li>At the end of the day, the last defined element wins the specificity wars.</li>
             </ol>
         </ol>
-        <h1>List of all commands</h1>
+        <table>List of all commands
         <tr><th> Command </th><th> Options </th><th> Function </th></tr>
         <tr><td> ls [options] [path]</td><td>  </td><td> Shows a list of files in the current working directory </td></tr>
         <tr><td>  </td><td> -a </td><td> Includes hidden files ("." and "..", for example) to the list of files</td></tr>
@@ -180,6 +181,7 @@
         <tr><td>  </td><td> -c </td><td> reports only a count of number of lines containing matches </td></tr>
         <tr><td>  </td><td> -v </td><td> Inverts, displaying only the lines which don't match </td></tr>
         <tr><td>  </td><td> -l </td><td> List file names where matches were found </td></tr>
+        </table>
     
         <p><a href = "tenth_class_lecture.html" target = "_self" rel = "noopener noreferrer">Back</a></p>
         <p><a href = "./../index.html" target = "_self" rel = "noopener noreferrer">Home</a></p>
