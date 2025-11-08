@@ -3,38 +3,60 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #000000;
-    color: #f0f0f0;
+    background-color: #121724;
+    color: #ffffff;
     font-family: "Times New Roman", serif;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 
 * {
-	font-size: 12px;
-	font-family: "Times New Roman"
+	font-family: "Times New Roman";
 }
 
-ol[type = "i"]{
-	color: #EE7EA0;
+ol[type = "I"]{
+	font-size: 18px;
+	color:#FA00FF;
 }
 
-ol[type = "a"]{
-	color: #FFAF6E;
+ol[type = "A"]{
+	font-size: 16px;
+	color: #86FFEA;
 }
 
 ol[type = "1"]{
-	color:#FFE2A6;
+	color:#43CDFF;
 }
 
 ol{
-	color:#FFE2A6;
+	color:#43CDFF;
 }
 
 ol.lowerLetter {
-	color:#7D8BE0;
+	color:#9B00FF;
 }
 
 ol.lowerRoman {
-	color:#CDBDEB
+	color:#FA00FF;
+}
+
+.code {
+	color:#81EDA4;
+	font-size: 16px;
+	font-family: serif;
+}
+
+table {
+	color:#81EDA4;
+	background-color: #20293F;
+}
+
+a {
+	color:#FA00FF
+}
+
+.codeContainer {
+	background-color: #20293F;
+	padding: 15px;
+	width: 100%;
 }
