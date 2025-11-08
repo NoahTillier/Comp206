@@ -122,5 +122,63 @@
                 <li>At the end of the day, the last defined element wins the specificity wars.</li>
             </ol>
         </ol>
+        <h1>List of all commands</h1>
+        <tr><th> Command </th><th> Options </th><th> Function </th></tr>
+        <tr><td> ls [options] [path]</td><td>  </td><td> Shows a list of files in the current working directory </td></tr>
+        <tr><td>  </td><td> -a </td><td> Includes hidden files ("." and "..", for example) to the list of files</td></tr>
+        <tr><td>  </td><td> -l </td><td> Shows all listed files in long format; including permissions and when the file was created </td></tr>
+        <tr><td> mkdir [options] [name]</td><td>  </td><td> Creates a new directory with the specified name </td></tr>
+        <tr><td> rmdir [options] [name]</td><td>  </td><td> Removes an empty directory </td></tr>
+        <tr><td>  </td><td> -i </td><td> Forces a confirmation before proceeding with the removal </td></tr>
+        <tr><td>  </td><td> -r </td><td> Recursively visits files and subdirectories to preform the same command </td></tr>
+        <tr><td>  </td><td> -f </td><td> Forces rmdir to act, overriding -i </td></tr>
+        <tr><td> cp [options] [file path] [destination path]</td><td>  </td><td> Copies a file from one place to another specified directory </td></tr>
+        <tr><td>  </td><td> -i </td><td> Forces a confirmation before proceeding with the copy </td></tr>
+        <tr><td>  </td><td> -r </td><td> Recursively visits files and subdirectories to preform the same command </td></tr>
+        <tr><td>  </td><td> -f </td><td> Forces rmdir to act, overriding -i </td></tr>
+        <tr><td> pwd </td><td>  </td><td> Displays the current working directory </td></tr>
+        <tr><td> cd </td><td>  </td><td> Changes the directory to one with a specified path </td></tr>
+        <tr><td> mv [options] [file path] [destination path] </td><td>  </td><td> Moves a file from the specified path to a new specified path </td></tr>
+        <tr><td>  </td><td> -i </td><td> Forces a confirmation before proceeding with the deletion </td></tr>
+        <tr><td> rm [options] [name] </td><td>  </td><td> Deletes a non-directory file </td></tr>
+        <tr><td>  </td><td> -i </td><td> Forces a confirmation before proceeding with the deletion </td></tr>
+        <tr><td>  </td><td> -r </td><td> Recursively visits files and subdirectories to preform the same command </td></tr>
+        <tr><td>  </td><td> -f </td><td> Forces rmdir to act, overriding -i </td></tr>
+        <tr><td> tar [options]</td><td>  </td><td> Combines many files into a single file or extracts those files from a .tar file </td></tr>
+        <tr><td>  </td><td> -c </td><td> Creates a new tar archive </td></tr>
+        <tr><td>  </td><td> -x </td><td> Extracts a tar archive </td></tr>
+        <tr><td>  </td><td> -f </td><td> Specifies the tar archive name </td></tr>
+        <tr><td>  </td><td> -v </td><td> Activates verbose mode </td></tr>
+        <tr><td>  </td><td> -z </td><td> Compresses the archive into a .tgz file </td></tr>
+        <tr><td> chmod [options][values] </td><td>  </td><td> Changes the permissions (for user, group, and others) for a file or directory (read, write, execute) </td></tr>
+        <tr><td>  </td><td> =, -, + </td><td> = sets permissions, - removes them, and + adds them (if they did not already exist) </td></tr>
+        <tr><td>  </td><td> r, w, x </td><td> r stands for read, w stands for write, and x stands for execute </td></tr>
+        <tr><td>  </td><td> u, g, o, a </td><td> u stands for the owner of the file, g stands for the group which the file belongs to, o stands for others, and a stands for all. </td></tr>
+        <tr><td>  </td><td> Binary settings </td><td> Instead of using a bunch of options, chmod can be used to set everyone's permissions with a binary code. Each digit represents the permissions for user, group, and others in that order. </td></tr>
+        <tr><td> less [file path] </td><td>  </td><td> Views files (or text) in the command prompt, allowing scrolling but without loading the whole file </td></tr>
+        <tr><td> head [options] </td><td>  </td><td> Presents the first 10 lines of text </td></tr>
+        <tr><td>  </td><td> -n[number] </td><td> specifies the number of lines to display </td></tr>
+        <tr><td> tail [options] </td><td>  </td><td> Presents the last 10 lines of text </td></tr>
+        <tr><td>  </td><td> -n[number] </td><td> specifies the number of lines to display </td></tr>
+        <tr><td> cut [options] [file] </td><td>  </td><td> Extracts sections of text from each line of a file or text stream </td></tr>
+        <tr><td>  </td><td> -d </td><td> Specifies a delimiter to extract; ex. ",", " ", "  " would seperate by commas, spaces, and tabs respectively </td></tr>
+        <tr><td>  </td><td> -f </td><td> If only one number is given, it extracts exclusively that column. Can be made to extract more columns by separating columns by commas. Can extract a range of columns by using a dash (ex. 1-3). Column counting starts from one.</td></tr>
+        <tr><td> wc [options] [file] </td><td>  </td><td> Counts the number of words in the file. By default counts lines, words, and characters separated by a space before outputting file name </td></tr>
+        <tr><td>  </td><td> -c </td><td> Counts the number of characters instead </td></tr>
+        <tr><td>  </td><td> -l </td><td> Counts the number of lines </td></tr>
+        <tr><td>  </td><td> -w </td><td> Counts the number of words </td></tr>
+        <tr><td> sort [options] [file] </td><td>  </td><td> Sorts data in a file or standard input </td></tr>
+        <tr><td>  </td><td> -n </td><td> Sorts by numeric keys (ex. a line starting with 5 will go before one starting with 25) </td></tr>
+        <tr><td>  </td><td> -r </td><td> Sorts in descending order </td></tr>
+        <tr><td>  </td><td> -o </td><td> Writes the sort to an output file </td></tr>
+        <tr><td> Uniq [options] [file] </td><td>  </td><td> Filters out consecutive, repeated lines from a file </td></tr>
+        <tr><td>  </td><td> -c </td><td> Prints number of occurences next to output </td></tr>
+        <tr><td> cat [file] </td><td>  </td><td> Prints text to STDOUT </td></tr>
+        <tr><td> grep [options] [STRING] [File List] </td><td>  </td><td> Outputs a result of pattern searching for STRING in File_List into STDOUT </td></tr>
+        <tr><td>  </td><td> -i </td><td> Ignore case </td></tr>
+        <tr><td>  </td><td> -n </td><td> displays the line number along with the line where a match was found </td></tr>
+        <tr><td>  </td><td> -c </td><td> reports only a count of number of lines containing matches </td></tr>
+        <tr><td>  </td><td> -v </td><td> Inverts, displaying only the lines which don't match </td></tr>
+        <tr><td>  </td><td> -l </td><td> List file names where matches were found </td></tr>
     </body>
 </html>
