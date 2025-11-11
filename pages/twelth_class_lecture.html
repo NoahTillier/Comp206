@@ -6,23 +6,59 @@
         <link rel="stylesheet" href = "./../code/styles.css">
     </head>
     <body>
+        <h1>Slide Notes 13</h1>
         <ol type = "I">
-            <li>
-                This is an element
+            <li>Arrays and Pointers
                 <ol type = "A">
-                    <li>This is another element
-                        <ol type = "1">
-                            <li>This is a third element
+                    <li>Pointer to an array
+                        <ol>
+                            <li>You can point to an array by pointing to the address of its first element. p = &a[0];</li>
+                            <li>You can also point to an array with p = a;</li>
+                            <li>When you add or subtract a value to a pointer, the address increases/decreases by <i>the integer times the size of the type the pointer points to</i>
                                 <ol type = "a" class = "lowerLetter">
-                                    <li>This is a fourth element
-                                        <ol type = "i" class = "lowerRoman">
-                                            <li>This the fifth element</li>
-                                        </ol>
-                                    </li>
+                                    <li>In this way, adding 2 to a pointer which points to the first element in an array will now point to the third.</li>
                                 </ol>
                             </li>
                         </ol>
                     </li>
+                    <li>Differences between an array and pointers
+                        <ol>
+                            <li>A compiler allocates space for the elements of the array.</li>
+                            <li>For a pointer, only the pointer's physical space is allocated.</li>
+                            <li>You can increment and decrement pointers directly, but you cannot do this with arrays</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>Strings
+                <ol type = "A">
+                    <li>A compiler stores place in memory equal to n+1. The n+1 character is a null character equal to ='\0'.</li>
+                    <li>Strings can be subscripted with STRING_NAME[INDEX].</li>
+                    <li>You can copy a string as an array.</li>
+                    <li>Difference between character pointers and character arrays
+                        <ol>
+                            <li>char *p = "abcd" is equivalent to const char *p = "abcd". This creates a string "abcd" and points to the first element in it. The string is immutable.</li>
+                            <li>char *p can be made to point somewhere else, but can't change the string directly.</li>
+                            <li>char a[] = "abcd" permits editing.</li>
+                        </ol>
+                    </li>
+                    <li>Assigning character arrays
+                        <ol>
+                            <li>char a[5] = "ab" sets an array with two letters and 3 null values.
+                                <ol type = "a" class = "lowerLetter">
+                                    <li>Note that an array keeps printing until it hits a null value. If you remove the last value, it will print values outside of the array.</li>
+                                </ol>
+                            </li>
+                            <li>char a[] = "abcd" creates an array exactly large enough to fit the string.</li>
+                            <li>For using scanf("%s, str) you do not need to add an & (not scanf("%s",&str) for example).</li>
+                            <li>
+                                <ol type = "a" class = "lowerLetter">
+                                    <li>scanf does not read the newline character, but fgets("%s",str1); will read it.</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>Careful not to compare strings directly because that will only compare the pointer. Also do not compare *a to *b because in an array it will only compare the first value.</li>
                 </ol>
             </li>
         </ol>

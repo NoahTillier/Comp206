@@ -182,6 +182,81 @@
         <tr><td>  </td><td> -v </td><td> Inverts, displaying only the lines which don't match </td></tr>
         <tr><td>  </td><td> -l </td><td> List file names where matches were found </td></tr>
         </table>
+
+        <h1>Slides 12 Notes</h1>
+        <ol type = "I">
+            <li>Arrays
+                <ol type = "A">
+                    <li>One Dimensional Arrays
+                        <div class = "codeContainer">
+<pre><code class = "code">    //TYPE NAME [SIZE];
+    int a[10]; //create an array with undefined values
+    int zeros[10]={0}; //create an array of 0s.
+    int b[5] = {4,3,2,1,2};
+    b[4] = 0
+    int c[5] = {4,3};
+</code></pre>
+                        </div>
+                        <ol>
+                            <li>Undefined values can still be accessed, but this behavior is undefined.</li>
+                            <li>There is no out of bounds error, unless you are accessing memory that you don't have permissions for (segmentation fault)</li>
+                            <li>sizeOf(VAR) returns the bytes of a variable and the number of bytes of an array.
+                                <div class = "codeContainer">
+<pre><code class = "code">
+    int i[5];
+    printf("Size of array is %zu\n", sizeof(i)); //prints size of full array
+    printf("Size of element in array is %zu\n", sizeof(i[0])); //prints size of an element
+    printf("Length of array is %zu\n", sizeof(i)/sizeof(i[0])); //prints number of elements
+</code></pre>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>Multi-dimensional Arrays
+                        <ol>
+                            <li>TYPE NAME [ROWS][COLS];</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>Pointers
+                <ol type = "A">
+                    <li>A variable which stores the address of another variable in memory.</li>
+                    <li>A pointer variable is declared by having an asterisk in the declarations
+                        <ol>
+                            <li>TYPE *VARIABLE;</li>
+                            <li>Ex. int *p;</li>
+                        </ol>
+                    </li>
+                    <li>We can access the address of a variable with the address of operator
+                        <ol>
+                            <li>Use & in front of the variable to access its pointer. Ex. int p = &a</li>
+                        </ol>
+                    </li>
+                    <li>Dereference Operator
+                        <ol>
+                            <li>We can use * to access what is stored in a pointer object. For example:
+                                <div class = "codeContainer">
+<pre><code class = "code">
+    int i;
+    int *p; //declaring the pointer variable
+    p = &and;i;  //using address-of operator to get the address of i
+    i = 5;
+    printf("%d", i); //prints 5
+    printf("%d", *p); //prints 5
+    *p = 2; //dereferencing p to access contents
+    printf("%d", i); //prints 2
+    printf("%d", *p); //prints 2
+</code></pre>
+                                </div>
+                            </li>
+                            <li>Whitespace doesn't matter in C so int * p == int* p == int *p</li>
+                            <li>However, int* p,q instantiates p as a pointer and q as an int. The correct form is int*p,*q</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
     
         <p><a href = "tenth_class_lecture.html" target = "_self" rel = "noopener noreferrer">Back</a></p>
         <p><a href = "./../index.html" target = "_self" rel = "noopener noreferrer">Home</a></p>
