@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Comp206_13</title>
+        <link rel = "stylesheet" href="./../code/styles.css">
+    </head>
+    <body>
+        <h1>Slide 13 Notes</h1>
+        <ol type = "I">
+            <li>Libraries in C
+                <ol type = "A">
+                    <li>A library is a set of precompiled functions you can reuse.</li>
+                    <li>Standard libraries come with the compiler, ex: <code>#include &ltstdio.h&gt</code> and <code>#include &ltmath.h</code></li>
+                    <li>User-defined libraries have a custom header, ex: mylib.h or mylib.c</li>
+                    <li>Using a library
+                        <ol>
+                            <li>you must #include the library</li>
+                            <li>you must include -l switch with gcc. For the math library, you must use the -lm tag.</li>
+                        </ol>
+                    </li>
+                    <li>Libraries
+                        <ol>
+                            <li>stdio.h
+                                <ol type = "a" class = "lowerLetter">
+                                    <li>Works with streams</li>
+                                    <li>Has stdin, stdout, stderr</li>
+                                    <li>Functions
+                                        <ol type = "i" class = "lowerRoman">
+                                            <li>getc(STREAM); returns a character from input stream, putc(CHARCTER, STREAM); prints to stream, puts(STRING)</li>
+                                            <li>getchar(); gets a character from exclusively stdin, putchar(CHARACTER); prints to screan</li>
+                                            <li>fgets(ARRAY,LIMIT,STREAM); returns a pointer to the input array (buffer) holding the contents of stream (only gets one line and reads limit-1 characters).</li>
+                                            <li>printf(STRING, OPTIONAL_ARGUMENTS); takes a string with format specifiers which are replaced with optional_arguments in order.</li>
+                                            <li>scanf(STRING, VARIABLE_ADDRESS1, VARIABLE_ADDRESS2,...);reads all types of data and returns the number of arguments. assigns the read input to a variable (note that STRING is a format specifier). Note that the carriage return enters the buffer after it is cleared, so you must use a garbage array to handle it.</li>
+                                            <li>sprintf(CHAR_ARRAY,STRING,VARIABLES); used to print values as characters for an array.</li>
+                                            <li>sscanf(CHAR_ARRAY,STRING,VARIABLES); used to convert variables from character values to other data types (ex. convert the digits of an int).</li>
+                                            <li>File functions: fopen, fclose, fprintf, fscan, feof, fgetc, fgets, fputc, fputs</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>stdlib.h 
+                                <ol type = "a" class = "lowerLetter">
+                                    <li>Functions
+                                        <ol type = "i" class = "lowerRoman">
+                                            <li>rand(void); generates a random number from 0 to 32767 (use modulo to get the correct range)</li>
+                                            <li>system(string); runs a bash command (like ls);</li>
+                                            <li>atof(string); ASCII to float</li>
+                                            <li>atoi(string); ASCII to integer</li>
+                                            <li>abs(int); absolute value</li>
+                                            <li>void exit(int)</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>math.h 
+                                <ol type = "a" class = "lowerLetter">
+                                    <li>sqrt(double); creates a square root</li>
+                                    <li>pow(base, exponent); raises to the power</li>
+                                    <li>abs(int); absolute value</li>
+                                    <li>fabs(double); absolute value for floats</li>
+                                    <li>floor(double);</li>
+                                    <li>ceil(double);</li>
+                                    <li>fmod(double x, double y); modulo for floating point numbers</li>
+                                    <li>sin, cos, tan, asin, acos, atan</li>
+                                </ol>
+                            </li>
+                            <li>string.h 
+                                <ol type = "a" class = "lowerLetter">
+                                    <li>strcmp(char *s1, char *s2); compares two strings</li>
+                                    <li>strncmp(char *s1, char *s2, size_t num); compares first num characters</li>
+                                    <li>size_t strlen(char *string); retunrs length of string</li>
+                                    <li>strcpy(char *dest, char *src); copies the src string into the dest array.</li>
+                                    <li>strcat(char *dest, char*src); appends the src strings to dest string</li>
+                                    <li>memset(void* ptr, int value, size_t num); set the first num bytes at the location pointed to by ptr</li>
+                                </ol>
+                            </li>
+                            <li>ctype.h 
+                                <ol type = "a" class = "lowerLetter">
+                                    <li>toupper(int); sends to uppercase</li>
+                                    <li>tolower(int); sends to lowercase</li>
+                                    <li>isalpha(int); tests whether character is a-z</li>
+                                    <li>isalphanum(int); tests whether character is a-z, 0-9</li>
+                                    <li>isdigit(int); tests whether character is 0-9</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>Escape characters
+                <ol type = "A">
+                    <li>\n = new line, \t = tab \a = bell \b = backspace with no erase \r = carriage return \\ backslash</li>
+                    <li>Format specifiers
+                        <ol>
+                            <li>% indicates a format specifier</li>
+                            <li>c = character, d or i = signed decimal integer, f = float, s = string of characters</li>
+                            <li>-: left-justify the width, + = show plus sign in front of number</li>
+                            <li>Specifying a number like 10 means that only 10 characters will be shown (pads with blank space).</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <h1>Slide 16 Notes</h1>
+        <ol type = "I">
+            <li>Structures
+                <ol type = "A">
+                    <li></li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>
