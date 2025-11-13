@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<hmtl lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Comp206_14</title>
+        <link rel="stylesheet" href="../code/styles.css">
+    </head>
+    <body>
+        <h1>Slides 14</h1>
+        <h3>Functions</h3>
+        <ol type = "I">
+            <li>Syntax
+                <div class = "codeBlock">
+<pre><code class = "code">
+    RETURN_TYPE FN_NAME(PARAMETERS){
+        BODY;
+        return EXPRESSION;
+    }
+</code></pre>
+                </div>
+                <ol type = "A">
+                    <li>Void can be used for the return type if you want nothing to be returned.</li>
+                    <li>The return type cannot be an array</li>
+                    <li>The function's name must be unique</li>
+                    <li>Comma separated list of parameters (like in java)</li>
+                </ol>
+            </li>
+            <li>Functions are called with FN_NAME(ARGUMENTS)</li>
+            <li>All identifiers must be declared before they are used.
+                <ol type = "A">
+                    <li>A way to do this if you want your function to appear after the main method is to input <code>RETURN_TYPE FN_NAME(Parameters);</code> as a single line with a semicolon.</code></li>
+                </ol>
+            </li>
+            <li>Arguments in C are passed by value. The variables in the body and declaration of the function are local to that function only.
+                <ol type = "A">
+                    <li>You can pass a pointer to a function to change the values. Passing by reference</li>
+                    <li>Arrays as parameters are always passed by reference, which means they can be edited. Note however that you will be missing the size of the array.</li>
+                </ol>
+            </li>
+            <li>Scope
+                <ol type = "A">
+                    <li>Variables can be declared outside of functions to have global scope</li>
+                    <li>Returning an array/string created in a function would not work; that information would likely be overwritten.
+                        <ol>
+                            <li>You could instead pass a buffer to the function to store the array.</li>
+                            <li>You could also instead make the string static (static char str[]) so that it does not get overwritten when the block terminates.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+
+        <h1>Slides 15</h1>
+        <h3>Dynamic Memory</h3>
+        <h1>Class Lectures</h1>
+        <ol type = "I">
+            <li>We will be covering computer networks, information security, and virtual machines and containers</li>
+            <li>Computer Networks
+                <ol type = "A">
+                    <li>A computer network is built of individual nodes
+                        <ol>
+                            <li>The internet has a protocol facilitating communication. (Communication protocol).</li>
+                            <li>Host are one type of node; any end system which runs a network app.</li>
+                            <li>Intermediary devices, which relay signals, are networking elements or routers which transfer things to hosts.
+                                <ol type = "a" class = "lowerLetter">
+                                    <li>These devices need some physical medium to relay signals over.</li>
+                                </ol>
+                            </li>
+                            <li>Networks are organized in a heirarchy to facilitate scaling. Personal -> corporate -> regional -> national -> international.
+                                <ol type = "a" class = "lowerLetter">
+                                    <li>Networks are nested; this is what creates the internet. (Inter-networking).</li>
+                                    <li>The first network was built by the pentagon, until universities mimicked the idea. They then had to figure out a way to connect all those networks together.</li>
+                                    <li>the internet is the most complex system ever designed.</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>The Internet 
+                        <ol>
+                            <li>The internet is one of the most complex systems ever built.</li>
+                            <li>We will cover different needs for applications, network organization, application protocols, transport protocols, and network protocols
+                                <ol type = "a" class = "lowerLetter">
+                                    <li>Ultimately, we will be learning how to host a server (like a chatroom). There is a 500 course about networks which is more in-depth.</li>
+                                </ol>
+                            </li>
+                            <li>We will be learning socket programming in C</li>
+                            <li>Streaming, gaming, server administration (like mimi), and file sharing are all applications of a network.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</hmtl>
